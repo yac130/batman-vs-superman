@@ -1,0 +1,1005 @@
+body {
+	background: #000;
+	color: #282828;
+	font-weight: normal;
+    font-style: normal;
+    height: 100%;
+	margin: 0;  
+	padding: 0;
+
+	text-shadow: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%; 	
+}
+div{
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,span,a {
+	text-shadow: none;
+}
+a{
+	text-decoration: none;
+}
+
+
+/** fonts **/
+
+@font-face {
+    font-family: 'komika_axisregular';
+    src: url('/especiales/batman-vs-superman/fonts/komikax_-webfont.eot');
+    src: url('/especiales/batman-vs-superman/fonts/komikax_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/especiales/batman-vs-superman/fonts/komikax_-webfont.woff2') format('woff2'),
+         url('/especiales/batman-vs-superman/fonts/komikax_-webfont.woff') format('woff'),
+         url('/especiales/batman-vs-superman/fonts/komikax_-webfont.ttf') format('truetype'),
+         url('/especiales/batman-vs-superman/fonts/komikax_-webfont.svg#komika_axisregular') format('svg');
+}
+
+/** jquery mobile **/
+
+
+
+.ui-content{
+	padding: 0 !important;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	background: #000 !important;
+}
+
+.header{
+	background: #fff;
+	padding: 5px 10px;
+	position: fixed;
+	width: 100%;
+    z-index: 99999;
+}	
+	.header h5{
+		display: inline-block;
+		font: 16px/38px 'komika_axisregular';
+		margin: 0 auto;
+	    text-align: center;	    
+	    width: 100%;
+	}
+		
+
+
+/** portada **/
+
+.portada{
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+}
+	.portada-1{
+		background: url(/especiales/batman-vs-superman/img/portada-1.jpg) no-repeat 0 0;
+		background-size: 100%;
+		z-index: 30;
+	}
+		.box-mensaje-portada{
+			bottom: 15px;
+			height: 15px;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+		}
+			.box-mensaje-portada div{		
+				color: #fff;
+				font: 13px/15px arial;
+				left: 60px;	
+				overflow: hidden;
+				position: absolute;			
+				width: 100%;
+
+				-webkit-animation: marquee 6s linear infinite; /* Safari 4+ */
+				-moz-animation:    marquee 6s linear infinite; /* Fx 5+ */
+				-o-animation:      marquee 6s linear infinite; /* Opera 12+ */
+				animation:         marquee 6s linear infinite; /* IE 10+, Fx 29+ */
+			}
+				.box-mensaje-portada span {
+					float: left;
+				}
+				@keyframes marquee {
+					0% { left: 0; }
+				  	100% { left: -100%; }
+				}
+				@-webkit-keyframes marquee {
+					0% { left: 0; }
+				  	100% { left: -100%; }
+				}
+				@-moz-keyframes marquee {
+					0% { left: 0; }
+				  	100% { left: -100%; }
+				}
+				@-o-keyframes marquee {
+					0% { left: 0; }
+				  	100% { left: -100%; }
+				}
+
+	.portada h4{
+		color: #fff;
+		font: 3em/0.8em 'komika_axisregular';
+		left: 100%;
+		margin: 0 auto;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: 225px;
+		width: 100%;
+		z-index: 30;
+	}
+		.portada h4 span{
+			color: #fff;
+			display: block;
+			font-size: 0.7em;
+			text-align: center;
+		}
+	.escudo-portada{
+		left: 0;
+		position: absolute;
+		top: 225px;
+	}
+
+	.portada-2{
+		z-index: 20;
+	}
+	.portada-11{
+		z-index: 10;
+	}
+	.portada-12{
+		z-index: 5;
+	}
+	
+
+		
+/** intro **/
+
+.hamburger,
+.cerrar-icon{	
+	background-size: 100%;	
+	height: 40px;
+	position: absolute;
+	width: 40px;
+}
+	.hamburger{
+		background: url(/especiales/batman-vs-superman/img/hamburger-icon.jpg) no-repeat 0 0;
+		background-size: 100%;
+	}
+	.cerrar-icon{
+		background: url(/especiales/batman-vs-superman/img/cerrar-icon.jpg) no-repeat 0 0;
+		background-size: 100%;
+		z-index: 50;
+	}
+	.main-menu{
+		background: url(/especiales/batman-vs-superman/img/bg-menu.jpg) no-repeat 0 0;
+		background-size: 100%;
+		height: 100%;
+		position: fixed;
+		top: -150%;
+		width: 100%;
+		z-index: 99999999;
+	}
+		/* Menu */
+		#menu,
+		#menu ul,
+		#menu li,
+		#menu a {
+			border: 0;
+			font: 22px/26px 'komika_axisregular';
+			line-height: 1;
+			list-style: none;
+		  	margin: 0;
+		  	padding: 0;
+		  	text-align: center;
+		  	text-decoration: none;	   	
+		  	position: relative;
+		}
+		#menu {
+			margin-top: 100px;
+			width: 100%;
+		}
+		#menu > ul > li {
+			margin: 0 0 25px 0;
+		}
+			#menu > ul > li:last-child {
+				margin: 0;
+			}
+		#menu > ul > li > a {
+			color: #000;	  
+			display: block;
+		}
+			#menu > ul > li > a > span {
+			  	display: block;		  
+			  	padding: 6px 10px;
+			}
+			#menu > ul > li > a:hover {
+			  	text-decoration: none;
+			}
+			#menu > ul > li.active {
+				border-bottom: none;
+			}
+				#menu > ul > li.active > a {				
+					color: #bdbdbd;
+				}
+				#menu > ul > li.active > a span {
+				  
+				}
+				#menu > ul > li.has-sub > a span {
+				  background: url(/especiales/batman-vs-superman/img/abajo.png) 75% center no-repeat;
+				}
+				#menu > ul > li.has-sub.active > a span {
+				  background: url(/especiales/batman-vs-superman/img/arriba.png) 75% center no-repeat;
+				}
+			/* Sub menu */
+			#menu ul ul {
+				display: none;
+				padding: 5px 12px;		  	
+			}
+				#menu ul ul li {
+				  	padding: 3px 0;
+				}
+					#menu ul ul a {
+						color: #595959;
+						display: block;		
+					}
+						#menu ul ul a:hover {
+							color: #b4001c;
+						}
+		.box-main-share{
+			background: url(/especiales/batman-vs-superman/img/texto-share.png) top center no-repeat;
+			background-size: 100%;
+			height: 170px;
+			margin: 40px auto 0;
+			width: 95%;   
+		}
+			ul.redes{
+				margin: 0 auto;
+				padding: 80px 0 0;
+				text-align: center;
+			}
+				ul.redes li{
+					display: inline-block;
+					vertical-align: top;
+				}
+					ul.redes li a{
+						display: inline-block;
+						height: 40px;
+						text-indent: -99999px;
+						vertical-align: top;
+						width: 40px;
+					}
+						ul.redes li a#facebook{
+							background: url(/especiales/batman-vs-superman/img/share-icons.png) no-repeat 0 0;
+							background-size: 96px 48px;
+						}
+						ul.redes li a#twitter{
+							background: url(/especiales/batman-vs-superman/img/share-icons.png) no-repeat -48px 0;
+							background-size: 96px 48px;
+						}
+		span.txt-creditos{
+			display: block;
+			font: 14px/14px arial;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+		}
+			.nombres{
+				font-weight: normal !important;
+				margin-top: 5px;
+				text-transform: none !important;
+			}
+
+/** portada 2 **/
+
+.slider-portada{
+
+}
+	.slick-prev,
+	.slick-next{
+		display: none !important;
+	}
+	.logo-comercio-portada{
+		height: 150px;
+		position: absolute;
+		top: 0;
+		z-index: 20;
+	}
+	a.btn-inicio{
+		background: url(/especiales/batman-vs-superman/img/btn-inicio.png) no-repeat;
+		background-size: 100%;
+		height: 120px;
+		position: absolute;
+		right: 0;
+		text-indent: -99999px;
+		top: 55%;
+		width: 95px;
+		z-index: 20;
+	}
+
+	.slide{
+		min-height: 800px !important;
+	}
+		.slide-2{
+			background: url(/especiales/batman-vs-superman/img/portada-2.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-3{
+			background: url(/especiales/batman-vs-superman/img/portada-3.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-4{
+			background: url(/especiales/batman-vs-superman/img/portada-4.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-5{
+			background: url(/especiales/batman-vs-superman/img/portada-18.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-6{
+			background: url(/especiales/batman-vs-superman/img/portada-19.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-7{
+			background: url(/especiales/batman-vs-superman/img/portada-20.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-8{
+			background: url(/especiales/batman-vs-superman/img/portada-6.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-9{
+			background: url(/especiales/batman-vs-superman/img/portada-7.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-10{
+			background: url(/especiales/batman-vs-superman/img/portada-8.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-11{
+			background: url(/especiales/batman-vs-superman/img/portada-32.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-12{
+			background: url(/especiales/batman-vs-superman/img/portada-33.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+		.slide-13{
+			background: url(/especiales/batman-vs-superman/img/portada-34.jpg) no-repeat 0 0;
+			background-size: 100%;
+		}
+
+/** bando **/
+
+.portada-3{
+	background: url(/especiales/batman-vs-superman/img/portada-5.jpg) no-repeat 0 0;
+	background-size: 100%;
+	z-index: 30;
+}
+	.box-main-bando{
+		margin-top: 250px;
+	}
+		.box-main-bando h3{
+			color: #fff;
+			font: 26px/26px 'komika_axisregular';
+			margin: 0 auto;
+			text-align: center;
+		}
+		.box-main-botones{
+			margin-top: 20px;
+			text-align: center;
+		}
+			a.btn-bando{
+				display: inline-block;
+				height: 99px;
+				margin: 0 5px;
+				text-align: center;
+				text-indent: -99999px;
+				vertical-align: top;
+				width: 145px;
+			}
+				.btn-bando-batman{
+					background: url(/especiales/batman-vs-superman/img/btn-bando.png) no-repeat 0 0;
+				}
+					.btn-bando-batman:hover{
+						background: url(/especiales/batman-vs-superman/img/btn-bando.png) no-repeat 0 -99px;
+					}
+				.btn-bando-superman{
+					background: url(/especiales/batman-vs-superman/img/btn-bando.png) no-repeat -174px 0;
+				}
+					.btn-bando-superman:hover{
+						background: url(/especiales/batman-vs-superman/img/btn-bando.png) no-repeat -174px -99px;
+					}
+
+/** batman **/
+
+.portada-4{
+	
+}
+	.box-btn-comic{
+		bottom: 20px;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+		.btn-comic{
+			background: url(/especiales/batman-vs-superman/img/btn-pattern.jpg) repeat-x;
+			border: 4px solid #000;
+			color: #000 !important;
+			display: inline-block;
+			font: 20px/22px 'komika_axisregular';
+			height: 25px;
+			padding: 5px 30px;
+			text-align: center;
+		}
+	ul.slick-dots {
+		list-style-type: none;
+		margin: 0 auto;
+		position: absolute;
+		text-align: center;
+		padding: 0;
+		top: 60px;
+	    width: 100%;    
+	}
+		ul.slick-dots li {
+			display: inline-block;
+			margin: 0 2px;
+			vertical-align: top;
+		}
+			ul.slick-dots li button{
+				background: transparent;
+				border: 1px solid #fff;   
+				border-radius: 7px; 
+				display: inline-block;	
+				height: 7px;
+				margin: 0 5px;
+				padding: 0;	
+	    		text-indent: -999px;
+	    		width: 7px;
+	    		vertical-align: top;
+			}
+		ul.slick-dots li.slick-active button{
+			background: #fff;
+		}
+.portada-5{
+	background: url(/especiales/batman-vs-superman/img/portada-9.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	a.cerrar{
+		color: #fff !important;
+	    display: block;
+	    font: 16px/16px arial;
+	    font-weight: normal !important;
+	    position: absolute;
+	    right: 15px;
+	    top: 60px;	    
+	}
+.portada-6{
+	background: url(/especiales/batman-vs-superman/img/portada-10.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+.portada-7{
+	background: url(/especiales/batman-vs-superman/img/portada-11.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+.portada-8{
+	background: url(/especiales/batman-vs-superman/img/portada-15.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-9{
+	background: url(/especiales/batman-vs-superman/img/portada-16.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-10{
+	background: url(/especiales/batman-vs-superman/img/portada-17.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+
+
+/** enfrentamientos **/
+
+ul.nav{
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: 65px;
+	width: 100%;
+}
+	ul.nav li{
+		border: 1px solid #fff;  
+		border-radius: 7px;  
+		display: inline-block;
+		height: 7px;
+		margin: 0 3px;
+		vertical-align: top;
+		width: 7px;
+	}
+		ul.nav li.active{
+			background: #fff;
+		}
+
+.portada-20{
+	background: url(/especiales/batman-vs-superman/img/portada-21.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-20-b{
+		background: url(/especiales/batman-vs-superman/img/portada-21-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-21{
+	background: url(/especiales/batman-vs-superman/img/portada-22.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-21-b{
+		background: url(/especiales/batman-vs-superman/img/portada-22-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-22{
+	background: url(/especiales/batman-vs-superman/img/portada-23.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-22-b{
+		background: url(/especiales/batman-vs-superman/img/portada-23-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-23{
+	background: url(/especiales/batman-vs-superman/img/portada-24.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-23-b{
+		background: url(/especiales/batman-vs-superman/img/portada-24-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-24{
+	background: url(/especiales/batman-vs-superman/img/portada-25.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-24-b{
+		background: url(/especiales/batman-vs-superman/img/portada-25-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-25{
+	background: url(/especiales/batman-vs-superman/img/portada-26.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-25-b{
+		background: url(/especiales/batman-vs-superman/img/portada-26-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-26{
+	background: url(/especiales/batman-vs-superman/img/portada-27.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-26-b{
+		background: url(/especiales/batman-vs-superman/img/portada-27-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-27{
+	background: url(/especiales/batman-vs-superman/img/portada-28.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-27-b{
+		background: url(/especiales/batman-vs-superman/img/portada-28-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-28{
+	background: url(/especiales/batman-vs-superman/img/portada-29.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-28-b{
+		background: url(/especiales/batman-vs-superman/img/portada-29-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-29{
+	background: url(/especiales/batman-vs-superman/img/portada-30.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+	.portada-29-b{
+		background: url(/especiales/batman-vs-superman/img/portada-30-b.jpg) no-repeat 0 0;
+		background-size: 100%;
+		min-height: 667px;
+		position: relative;
+	}
+.portada-30{
+	background: url(/especiales/batman-vs-superman/img/portada-31.jpg) no-repeat 0 0;
+	background-size: 100%;
+	min-height: 667px;
+	position: relative;
+}
+.portada-32{
+	background: url(/especiales/batman-vs-superman/img/portada-6.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-33{
+	background: url(/especiales/batman-vs-superman/img/portada-7.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-34{
+	background: url(/especiales/batman-vs-superman/img/portada-8.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-35{
+	background: url(/especiales/batman-vs-superman/img/portada-12.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-36{
+	background: url(/especiales/batman-vs-superman/img/portada-13.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+.portada-37{
+	background: url(/especiales/batman-vs-superman/img/portada-14.jpg) no-repeat 0 0;
+	background-size: 100%;
+	position: absolute;
+}
+
+
+/** trivia **/
+
+.box-test{
+	background: url(/especiales/batman-vs-superman/img/bg-pattern-trivia.jpg) repeat;
+	color: #000;
+	float: left;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+	#frame {		
+		margin: 0 auto;	 
+		min-height: 667px;
+		padding-top: 50px;
+		width: 100%;             
+	}
+		p.pager {
+			font: 20px/20px 'komika_axisregular';
+		    margin: 0 auto;	    
+		    text-align: center;
+		}
+		.question{
+			font: 22px/25px 'komika_axisregular';
+			text-align: center;
+		}
+		img.question-image {	
+			border: 2px solid #000;
+		    position: relative;
+		    margin: 0 auto;
+		    width: 70%;
+		    display: block;
+		}
+		#choice-block {			
+		    display: block;
+		    list-style-type: none; 
+		    margin: 0;
+		    padding:0;
+		}
+			.choice-box {
+				border: 3px solid #000;
+				background: #fff;
+				font: 16px/25px 'komika_axisregular';
+		    	margin: 0 auto 10px;
+		    	padding: 10px 0;
+		      	text-align: center;		
+		      	width: 80%;      	
+		  	}
+		  	#submitbutton {
+		    	background: url(/especiales/batman-vs-superman/img/btn-pattern.jpg) repeat;
+		    	bottom: 20px;
+		    	left: 33%;		    	
+		    	width: 30%;    
+		  	}
+			  	#submitbutton:hover {
+			    	/*background:#7b8da6;*/
+			  	}
+	  #explanation {
+	  	font: 15px/22px 'komika_axisregular';
+	    margin: 0 8px;
+	    padding: 15px;
+	    position: relative;
+	    top: 52%;
+	    width: 88%;
+	  }
+	  .div-test{	  	
+	  	font: 20px/25px 'komika_axisregular';
+	  	left: 0;	  	
+	  	top: -30%;
+	  }
+
+	  	img.question-test {			
+		    position: absolute;
+		    margin: 30px auto 0;
+		    width: 100%;
+		}
+		#question-test{
+			display: none !important;
+		}
+	  
+
+
+/** desktop **/
+
+/** desktop **/
+
+.header-comercio{
+	background: #000;
+	padding: 0;	
+	position: relative;
+	width: 100%;
+	z-index: 50;
+}
+	.ctn-header-desktop{
+		background: #000;
+		margin: 0 auto;
+		max-width: 1000px;
+		padding: 15px 10px;
+		position: relative;		
+	}
+		a.logo,
+		a.logo-footer{			
+			display: inline-block;			
+			text-indent: -99999px;			
+		}
+			a.logo{
+				background: url(/especiales/batman-vs-superman/img/logo-comercio.png) no-repeat 0 0;
+				height: 19px;
+				width: 110px;
+			}
+	#social,
+	.compartir{
+		float: right;	
+		margin-top: -5px;
+	}
+	.compartir{
+		margin: 0 auto;
+		position: relative;
+		width: 54px;
+		z-index: 99999;
+	}		
+		#social ul,
+		.compartir ul {
+			cursor: pointer;
+			float: left;
+			list-style-type: none;
+			list-style-image: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;            
+		}
+			#social li,
+			.compartir li{		        	
+			    display: inline-block;
+			    margin: 0;
+			    *display: inline;
+			    vertical-align: top;
+			    zoom: 1;
+			}
+				#social li a,
+				.compartir li a {
+			        background: url(/especiales/batman-vs-superman/img/sprites.png) no-repeat 0 0; 
+			        border: 0;
+			        display: block;
+			        height: 13px; 
+			        margin: 0 2px;                     
+			        padding: 10px;
+			        text-indent: -9999px;                          
+			        width: 13px;
+			    }
+			    .compartir li a{
+			    	height: 50px;
+			    	margin: 0 2px 15px;
+			    	padding: 0;
+			    	width: 50px;
+			    }
+					#social li a#facebook {
+					    background-position: 0 0;
+					}
+						#social li a#facebook:hover {
+					    	background-position: 0 -50px;
+						}	     
+					#social li a#twitter {
+					    background-position: -50px 0;		
+					}	
+						#social li a#twitter:hover {
+					    	background-position: -50px -50px;
+						}
+	
+	.wrapper{
+
+	}
+		.wrapper img{
+			display: block;
+			margin: 50px auto;
+		}
+
+
+@media screen and (orientation: landscape){
+
+	.landscape{
+		background: #000;
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		z-index: 999999999;
+	}
+		.landscape-icon{
+			background: url(/especiales/batman-vs-superman/img/landscape-icon.png) no-repeat center center;
+			background-size: 100%;
+			height: 250px;
+			margin: 5% auto 0;
+			max-width: 400px;
+		}
+
+	#article1,	#article2,	#article3,	#article4,	#article5,	#article6,	#article7,
+	#article8,	#article9,	#article10,	#article11,	#article12, #article13, #article14,
+	#article15,	#article16,	#article17,	#article18,	#article19, #article20, #article21,
+	#article22,	#article23,	#article24,	#article25,	#article26, #article27, #article28,
+	#article29,	#article30, #article31,	#article32, #article33,	#article34, #article35,
+	#article36, #article37, #article38, #article39, #article40, #article41, #article42
+	{
+		display: none;
+	}
+}
+
+/** chamchung **/
+@media only screen and (min-height: 640px) and (max-height: 650px) {
+
+	.interior-batman{
+		min-height: 640px;
+	}
+}
+
+/** iphone 4/5 **/
+@media only screen and (min-width: 320px) and (max-height: 490px) {
+
+	.portada-1{
+		background: url(/especiales/batman-vs-superman/img/portada-1-iphone4.jpg) no-repeat center center;
+	}
+	a.btn-inicio{
+		background-size: 100%;
+		height: 120px;
+		top: 60%;
+		width: 95px;
+	}
+	.slide{
+		min-height: 480px!important;
+	}
+		.slide-2{
+			background: url(/especiales/batman-vs-superman/img/portada-2-iphone4.jpg) no-repeat center center;
+		}
+		.slide-3{
+			background: url(/especiales/batman-vs-superman/img/portada-3-iphone4.jpg) no-repeat 0 0;
+		}
+		.slide-4{
+			background: url(/especiales/batman-vs-superman/img/portada-4-iphone4.jpg) no-repeat 0 0;			
+		}
+		.slide-5{
+			background: url(/especiales/batman-vs-superman/img/portada-18-iphone4.jpg) no-repeat 0 0;			
+		}
+		.slide-6{
+			background: url(/especiales/batman-vs-superman/img/portada-19-iphone4.jpg) no-repeat 0 0;			
+		}
+		.slide-7{
+			background: url(/especiales/batman-vs-superman/img/portada-20-iphone4.jpg) no-repeat 0 0;
+		}
+	.box-main-bando {
+	    margin-top: 170px;
+	}
+	.box-btn-comic {
+	    bottom: 25px;
+	}
+
+	.portada-5{
+		background: url(/especiales/batman-vs-superman/img/portada-9-iphone4.jpg) no-repeat 0 0;
+	}
+	.portada-6{
+		background: url(/especiales/batman-vs-superman/img/portada-10-iphone4.jpg) no-repeat 0 0;
+	}
+
+
+	#menu{
+		margin-top: 20px;
+	}
+		#menu > ul > li {
+		    margin: 0 0 15px 0;
+		}
+	.box-main-share{
+		height: 160px;
+	}
+	.logo-comercio-portada{
+		height: 140px;
+		top: 15px;
+	}
+}
+
+/** iphone 6 **/
+@media only screen and (min-width: 375px) and (max-width: 380px){
+
+	#menu {
+	    margin-top: 70px;
+	}
+		.box-main-share{
+			margin-top: 30px;
+		}
+		ul.redes{
+			padding-top: 100px;
+		}
+	.interior-batman{
+		min-height: 627px;
+	}
+	.slide {
+	    min-height: 630px !important;
+	}
+	.portada-3{
+
+	}
+}
+
+/** iphone 6 plus**/
+@media only screen and (min-height: 736px) and (max-height: 740px) {
+	
+	.interior-batman{
+		min-height: 736px;
+	}
+	
+}
+
+/** nokia **/
+@media only screen and (min-height: 800px) and (max-height: 810px) {
+
+	.interior-batman{
+		min-height: 800px;
+	}
+}
